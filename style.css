@@ -1,18 +1,32 @@
 .keyBoard{
     display: flex;
+}
+.operators{
+    display: flex;
+    flex-direction: column;
+}
+.operator{
+    height: 50px;
+    width: 50px;
+}
+
+.nums{
+    display: flex;
     width: 150px;
-    flex-wrap: wrap;
-    
+    flex-wrap: wrap-reverse;  
 }
 .num{
     height: 50px;
     width: 50px;
-    background-color: brown;
 }
 .zero{
     width: 100px;
 }
 .point{
+    height: 50px;
+    width: 50px;
+}
+.variable{
     height: 50px;
     width: 50px;
 }
