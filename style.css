@@ -1,0 +1,11 @@
+.keyBoard{
+    display: flex;
+    height: 150px;
+    width: 150px;
+    flex-wrap: wrap;
+    
+}
+.num{
+    height: 50px;
+    width: 50px;
+}
