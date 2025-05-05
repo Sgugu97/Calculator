@@ -8,6 +8,7 @@
 .operator{
     height: 50px;
     width: 50px;
+    font-size: 30px;
 }
 
 .nums{
@@ -18,15 +19,28 @@
 .num{
     height: 50px;
     width: 50px;
+    font-size: 30px;
 }
 .zero{
     width: 100px;
+    font-size: 30px;
 }
 .point{
     height: 50px;
     width: 50px;
+    font-size: 30px;
 }
 .variable{
     height: 50px;
     width: 50px;
+    font-size: 25px;
+}
+.monitor{
+    display: flex;
+    height: 50px;
+    width: 198px;
+    justify-content: end;
+    align-items: end;
+    font-size: 40px;
+    border: 1px solid black;
 }

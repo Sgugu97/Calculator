@@ -1,7 +1,18 @@
+//to show the result
+const monitor = document.createElement("div");
+monitor.setAttribute("class", "monitor");
+document.body.appendChild(monitor);
+monitor.textContent = 0;
+
+
+
+
 const keyBoard = document.createElement("div");
 keyBoard.setAttribute("class", "keyBoard");
 document.body.appendChild(keyBoard);
 
+
+//to make operators (left side)
 const operators = document.createElement("div");
 operators.setAttribute("class", "operators");
 keyBoard.appendChild(operators);
@@ -16,6 +27,7 @@ for (let i=0; i<simbols.length; i++){
 }
 
 
+//to make the other operators(top right)
 const varies = document.createElement("div");
 varies.setAttribute("class", "varies");
 keyBoard.appendChild(varies);
@@ -29,6 +41,8 @@ for (let i=0; i<variables.length; i++){
     variable.addEventListener("click", ()=> console.log(variables[i]));
 }
 
+
+//to make numbers and the dot
 const digits = document.createElement("div");
 digits.setAttribute("class", "digits");
 varies.appendChild(digits);
@@ -42,22 +56,20 @@ for(let i=1; i<=9; i++){
     num.setAttribute("class", `num`);
     num.textContent = `${i}`;
     nums.appendChild(num);
-    num.addEventListener("click", ()=> console.log(`${i}`));
+    num.addEventListener("click", ()=>  document.querySelector('.monitor').innerHTML=monitor.textContent + `${i}`);
 }
-
 
 const zero = document.createElement("button");
 zero.setAttribute("class", `num zero`);
 zero.textContent = `0`;
 digits.appendChild(zero);
-zero.addEventListener("click", ()=> console.log(`0`));
-
+zero.addEventListener("click", ()=> document.querySelector('.monitor').innerHTML=monitor.textContent + 0);
 
 const point = document.createElement("button");
 point.setAttribute("class", `num point`);
 point.textContent = `.`;
 digits.appendChild(point);
-point.addEventListener("click", ()=> console.log(`.`));
+point.addEventListener("click", ()=> document.querySelector('.monitor').innerHTML=monitor.textContent +  ".");
 
 
 
