@@ -1,0 +1,60 @@
+body{
+    display: flex;
+    justify-content: center;
+}
+.calculator{
+    border: 5px solid black;
+}
+.nums{
+    display: flex;
+    width: 150px;
+    flex-wrap: wrap;  
+}
+.num{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+.zero{
+    width: 100px;
+    height: 50px;
+    font-size: 30px;
+}
+.operator{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+.keyBoard{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; 
+    width: 200px;
+}
+.operators{
+    display: flex;
+    flex-direction: column;
+}
+.display{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width:198px;
+    height: 50px;
+    font-size: 40px;
+    border: 1px solid black;
+}
+.equal{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
+.varies{
+    display: flex;
+    
+}
+.varie{
+    height: 50px;
+    width: 50px;
+    font-size: 30px;
+}
