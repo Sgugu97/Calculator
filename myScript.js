@@ -1,10 +1,42 @@
+//calculator functioning
+function add(a,b){
+    return a + b;
+}
+function subtract(a,b){
+    return a - b;
+}
+function multiply(a,b){
+    return a * b;
+}
+function divide(a,b){
+    return a / b;
+}
+
+let operatore;
+let numFirst;
+let numSecond;
+
+function operate(operatore, numFirst, numSecond){
+    if(operator === `+`){
+        return add(numFirst, numSecond);
+    }else if (operatore=== `-`){
+        return subtract(numFirst, numSecond);
+    }else if (operatore === `*`){
+        return multiply(numFirst, numSecond);
+    }else if (operatore === `/`){
+        return divide(numFirst, numSecond);
+    }
+}
+
+
+
+
+
 //to show the result
 const monitor = document.createElement("div");
 monitor.setAttribute("class", "monitor");
 document.body.appendChild(monitor);
-monitor.textContent = 0;
-
-
+monitor.textContent = '';
 
 
 const keyBoard = document.createElement("div");
@@ -23,7 +55,8 @@ for (let i=0; i<simbols.length; i++){
     operator.setAttribute("class", "operator");
     operator.textContent = simbols[i];
     operators.appendChild(operator);
-    operator.addEventListener("click", ()=> console.log(simbols[i]));
+    operator.addEventListener("click", ()=> numFirst = monitor.textContent);
+
 }
 
 
@@ -56,20 +89,18 @@ for(let i=1; i<=9; i++){
     num.setAttribute("class", `num`);
     num.textContent = `${i}`;
     nums.appendChild(num);
-    num.addEventListener("click", ()=>  document.querySelector('.monitor').innerHTML=monitor.textContent + `${i}`);
+    num.addEventListener("click", ()=> monitor.textContent=monitor.textContent + `${i}`);
 }
 
 const zero = document.createElement("button");
 zero.setAttribute("class", `num zero`);
 zero.textContent = `0`;
 digits.appendChild(zero);
-zero.addEventListener("click", ()=> document.querySelector('.monitor').innerHTML=monitor.textContent + 0);
+
 
 const point = document.createElement("button");
 point.setAttribute("class", `num point`);
 point.textContent = `.`;
 digits.appendChild(point);
-point.addEventListener("click", ()=> document.querySelector('.monitor').innerHTML=monitor.textContent +  ".");
-
 
 
