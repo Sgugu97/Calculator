@@ -48,7 +48,7 @@ point.addEventListener("click",()=>{
 nums.forEach(num => {
     num.addEventListener("click", () => {
         if(switchForMonitor===true){
-            monitor.textContent = parseInt(monitor.textContent + `${num.textContent}`);
+            monitor.textContent = parseFloat(monitor.textContent + `${num.textContent}`);
         }else if(switchForMonitor===false){
             monitor.textContent=`${num.textContent}`;
             switchForMonitor=true;
@@ -62,7 +62,7 @@ const simbols = document.querySelectorAll(".operator");
 
 simbols.forEach(simbol => {
     simbol.addEventListener("click", ()=>{
-        operand.push(parseInt(monitor.textContent));
+        operand.push(parseFloat(monitor.textContent));
         if(operand.length>1){
             if(tot.length>=1){
                 tot.push(operate(ope,tot.slice(-1)[0],operand.slice(-1)[0]))
@@ -89,7 +89,7 @@ simbols.forEach(simbol => {
 
 
 equal.addEventListener("click",()=>{
-    operand.push(parseInt(monitor.textContent));
+    operand.push(parseFloat(monitor.textContent));
     if(operand.length>1){
         if(tot.length>=1){
             tot.push(operate(ope,tot.slice(-1)[0],operand.slice(-1)[0]));
@@ -122,7 +122,7 @@ equal.addEventListener("click",()=>{
 
 varies.forEach(varie =>{
     varie.addEventListener("click",()=>{
-        operand.push(parseInt(monitor.textContent));
+        operand.push(parseFloat(monitor.textContent));
         ope=varie.textContent;
         if (ope==="AC"){
             switchForMonitor=false;
